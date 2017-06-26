@@ -1,2 +1,2 @@
 # hello-world
-hello github
+hello github is tutorial to learn github
