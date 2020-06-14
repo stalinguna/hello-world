@@ -11,7 +11,10 @@
         ioClient.on("message", msg => console.log(msg));
         alert("connect");
       });
-      
+      ioClient.on('user joined', (data) => {
+    log(data.username + ' joined');
+   
+  });
     </script>
   </body>
 </html>
