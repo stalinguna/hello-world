@@ -8,8 +8,9 @@
       ioClient.on("connect", socket => {
         ioClient.send("Hello everybody!");
         ioClient.on("message", msg => console.log(msg));
+        io().emit('add user', "eerew user");
       });
-      io().emit('add user', "eerew user");
+      
     </script>
   </body>
 </html>
