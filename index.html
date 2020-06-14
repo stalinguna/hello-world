@@ -4,11 +4,12 @@
   </head>
   <body>
     <script type="text/javascript"> 
+      alert("load");
       ioClient = io.connect("https://socket-io-chat-fist.herokuapp.com/socket.io");
       ioClient.on("connect", socket => {
         ioClient.send("Hello everybody!");
         ioClient.on("message", msg => console.log(msg));
-        io().emit('add user', "eerew user");
+        alert("connect");
       });
       
     </script>
