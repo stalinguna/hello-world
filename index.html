@@ -7,9 +7,10 @@
       alert("load");
       ioClient = io.connect("https://socket-io-chat-fist.herokuapp.com/socket.io");
       ioClient.on("connect", socket => {
+         alert("connect");
         ioClient.send("Hello everybody!");
         ioClient.on("message", msg => console.log(msg));
-        alert("connect");
+       
       });
       ioClient.on('user joined', (data) => {
     log(data.username + ' joined');
