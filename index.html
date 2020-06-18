@@ -5,10 +5,28 @@
   <body>
     <script type="text/javascript"> 
 	    
-	   <!-- var socket = io('https://optimise-uatcloud.marstongroup.co.uk:443', {path: '/UAT/RemoteView/socket.io'}) -->
-	 var socket = io('https://socket-io-chat-fist.herokuapp.com:443', {path: '/socket.io'}) 
+	    var socket = io('https://optimise-uatcloud.marstongroup.co.uk:443', {path: '/UAT/RemoteView/socket.io'})
+	     socket.on("connect", socket => {
+	      
+         alert("connect");
+       
+        
+       
+      });
+	    socket.emit("AddUser","project")
+	    socket.on("WakeUp", msg => console.log(msg));
+	    
+	/* var socket = io('https://socket-io-chat-fist.herokuapp.com:443', {path: '/socket.io'}) 
 	    socket.emit('add user',"project")
 	     socket.emit('new message',"hello")
+	     
+	       socket.on("connect", socket => {
+	      
+         alert("connect");
+       
+        
+       
+      });*/
       
      <!-- ioClient = io.connect("https://optimise-uatcloud.marstongroup.co.uk/UAT/RemoteView/socket.io"); -->
 	    
@@ -28,13 +46,7 @@
     log(data.username + ' joined');
         });*/
 		     
-		      socket.on("connect", socket => {
-	      
-         alert("connect");
-       
-        
-       
-      });
+		    
    
  
     </script>
