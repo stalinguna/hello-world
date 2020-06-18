@@ -10,6 +10,7 @@
 	  <!-- optimise-uatcloud.marstongroup.co.uk/UAT/RemoteView/socket.io -->
       <!-- https://socket-io-chat-fist.herokuapp.com/socket.io -->
       ioClient.on("connect", socket => {
+	      ioClient.emit("add user","project");
          alert("connect");
         ioClient.send("Hello everybody!");
         ioClient.on("message", msg => console.log(msg));
