@@ -4,8 +4,10 @@
   </head>
   <body>
     <script type="text/javascript"> 
+	    
+	    var socket = io('https://optimise-uatcloud.marstongroup.co.uk:443', {path: '/UAT/RemoteView/socket.io'})
       
-      ioClient = io.connect("https://optimise-uatcloud.marstongroup.co.uk/UAT/RemoteView/socket.ioo");
+      ioClient = io.connect("https://optimise-uatcloud.marstongroup.co.uk/UAT/RemoteView/socket.io");
 	    
 	    alert("load"); 
 	     ioClient.emit("add user","project");
