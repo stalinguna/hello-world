@@ -5,7 +5,10 @@
   <body>
     <script type="text/javascript"> 
 	    
-	    var socket = io('https://optimise-uatcloud.marstongroup.co.uk:443', {path: '/UAT/RemoteView/socket.io'})
+	   <!-- var socket = io('https://optimise-uatcloud.marstongroup.co.uk:443', {path: '/UAT/RemoteView/socket.io'}) -->
+	 var socket = io('https://socket-io-chat-fist.herokuapp.com:443', {path: '/socket.io'}) 
+	    socket.emit('add user',"project")
+	     socket.emit('new message',"hello")
       
       ioClient = io.connect("https://optimise-uatcloud.marstongroup.co.uk/UAT/RemoteView/socket.io");
 	    
