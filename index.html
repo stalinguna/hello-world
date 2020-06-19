@@ -47,8 +47,12 @@
         });*/
 		     
 		    
-   
+     fun addUser(){
+	     socket.emit("AddUser","project")
+     }
  
     </script>
+	  
+	  <button onClick="addUse()">Add user</button>
   </body>
 </html>
