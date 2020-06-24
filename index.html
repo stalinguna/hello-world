@@ -59,7 +59,7 @@
 	    
 	     function sendMessage(){
 		     var message = $('#txt_message').val();
-	     socket.emit("textmessage",message")
+	     socket.emit("textmessage",message)
      }
 	    socket.on('userimage', image);
 	    socket.on('textmessage', textMessage);
