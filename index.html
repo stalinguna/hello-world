@@ -81,7 +81,7 @@ function image (from, base64Image) {
         //and appends it to the DOM so my UI shows
         //that I posted an image.
         //send the image via Socket.io
-       // socket.emit('userimage', evt.target.result);
+        socket.emit("message", evt.target.result);
 	    socket.emit("message","imageupload");
 	    socket.emit("userimage", 'df');
 	    socket.emit("message","imageupload2");
