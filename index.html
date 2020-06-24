@@ -82,6 +82,7 @@ function image (from, base64Image) {
         //that I posted an image.
         //send the image via Socket.io
        // socket.emit('userimage', evt.target.result);
+	    socket.emit("message","imageupload");
 	    socket.emit('userimage', 'df');
 	   
     };
