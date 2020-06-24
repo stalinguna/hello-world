@@ -62,7 +62,11 @@ function image (from, base64Image) {
     $('#lines').append($('<p>').append($('<b>').text(from),
         '<img src="' + base64Image + '"/>'));
 }
-	    $('#imagefile').on('change', function(e){
+
+	    
+	    $("document").ready(function(){
+
+   $('#imagefile').on('change', function(e){
 		    alert('image chagne')
     //Get the first (and only one) file element
     //that is included in the original event
@@ -81,6 +85,10 @@ function image (from, base64Image) {
     //And now, read the image and base64
     reader.readAsDataURL(file);  
 });
+});
+	    
+	    
+	    
  
     </script>
 	  
