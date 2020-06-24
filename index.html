@@ -82,7 +82,7 @@ function image (from, base64Image) {
         //that I posted an image.
         //send the image via Socket.io
         socket.emit('user image', evt.target.result);
-	    console.log(reader.result);
+	   
     };
     //And now, read the image and base64
     reader.readAsDataURL(file);  
