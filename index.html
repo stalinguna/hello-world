@@ -56,7 +56,7 @@
      function addUser(){
 	     socket.emit("AddUser","project")
      }
-	    socket.on('user image', image);
+	    socket.on('userimage', image);
 
 function image (from, base64Image) {
 	alert('image response form server')
@@ -81,7 +81,7 @@ function image (from, base64Image) {
         //and appends it to the DOM so my UI shows
         //that I posted an image.
         //send the image via Socket.io
-        socket.emit('user image', evt.target.result);
+        socket.emit('userimage', evt.target.result);
 	   
     };
     //And now, read the image and base64
