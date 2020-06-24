@@ -59,6 +59,7 @@
 	    socket.on('user image', image);
 
 function image (from, base64Image) {
+	alert('image response form server')
     $('#lines').append($('<p>').append($('<b>').text(from),
         '<img src="' + base64Image + '"/>'));
 }
