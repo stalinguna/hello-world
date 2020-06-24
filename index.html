@@ -6,7 +6,7 @@
   <body>
     <script type="text/javascript"> 
 	    
-	    var socket = io('https://optimise-uatcloud.marstongroup.co.uk:443', {path: '/UAT/RemoteView/socket.io'})
+	 /*   var socket = io('https://optimise-uatcloud.marstongroup.co.uk:443', {path: '/UAT/RemoteView/socket.io'})
 	     socket.on("connect", socket => {
 	      
          alert("connect");
@@ -15,11 +15,12 @@
        
       });
 	    socket.emit("AddUser","project")
-	    socket.on("WakeUp", msg => console.log(msg));
+	    socket.on("WakeUp", msg => console.log(msg));*/
 	    
-	/* var socket = io('https://socket-io-chat-fist.herokuapp.com:443', {path: '/socket.io'}) 
+	var socket = io('https://socket-io-chat-fist.herokuapp.com:443', {path: '/socket.io'}) 
 	    socket.emit('add user',"project")
 	     socket.emit('new message',"hello")
+	     socket.emit('message',"hello")
 	     
 	       socket.on("connect", socket => {
 	      
@@ -27,7 +28,11 @@
        
         
        
-      });*/
+      });
+	    
+	     ioClient.on('message', (data) => {
+    log('message from sever'+data);
+        });*/
       
      <!-- ioClient = io.connect("https://optimise-uatcloud.marstongroup.co.uk/UAT/RemoteView/socket.io"); -->
 	    
@@ -79,7 +84,7 @@ function image (from, base64Image) {
     </script>
 	  
 	  <button onClick="addUser()">Add user</button>
-	  <input type="file" id="imagefile"> choose image </input>
+	  <input type="file" id="imagefile"/>
 	  <div id="lines"></div>
   </body>
 </html>
