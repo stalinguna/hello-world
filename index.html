@@ -56,7 +56,16 @@
      function addUser(){
 	     socket.emit("AddUser","project")
      }
+	    
+	     function sendMessage(){
+		     var message = $('#txt_message').val();
+	     socket.emit("textmessage",message")
+     }
 	    socket.on('userimage', image);
+	    socket.on('textmessage', textMessage);
+		      function textMessage(msg){
+		     $('#lines').append($('<br><p>').append($('<b>').text(msg));
+	    }
 
 function image (from, base64Image) {
 	alert('image response form server')
@@ -93,9 +102,9 @@ function image (from, base64Image) {
 	    
  
     </script>
-	  
-	  <button onClick="addUser()">Add user</button>
+	  <input type="text" id="txt_message" /> <button onClick ="sendMessage()">Send Message</button>  </br>	
+	 <!-- <button onClick="addUser()">Add user</button> -->
 	  <input type="file" id="imagefile"/>
-	  <div id="lines"></div>
+	  <div id="lines" ></div>
   </body>
 </html>
