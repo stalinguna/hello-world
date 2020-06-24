@@ -64,7 +64,7 @@
 	    socket.on('userimage', image);
 	    socket.on('textmessage', textMessage);
 		      function textMessage(msg){
-		     $('#lines').append($('<br><p>').append($('<b>').text(msg));
+		     $('#lines').append($('<br><p>').append($('<b>').text(msg)));
 	    }
 
 function image (from, base64Image) {
